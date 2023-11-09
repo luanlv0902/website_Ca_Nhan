@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lab 4</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicons -->
+    <link href="img/icon_LvL.png" rel="icon">
+    <link href="img/favicon.png" rel="apple-touch-icon">
+
+    <!-- Bootstrap CSS File -->
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Libraries CSS Files -->
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Main Stylesheet File -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <!--/ Nav Star /-->
+    <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll" href="index.html">LvL</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll" href="#lab4">Lab 4</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--/ Nav End /-->
+
+    <!-- Lab 4 Section -->
+    <section id="lab4" class="lab4-mf sect-pt4 route">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="tabs">
+                        <button class="tablink action" data-qlsv="requirement">Requirement</button>
+                        <button class="tablink" data-qlsv="design">Design</button>
+                        <button class="tablink" data-qlsv="implement">Implement</button>
+                    </div>
+                    <!-- Tab content -->
+                    <div class="wrapper_tabcontent">
+                        <div id="requirement" class="tabcontent action">
+                            <h1>Yêu Cầu</h1>
+                            <p>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ như lớp môn học, giảng viên,… Sau đó
+                                thiết kế chức năng Quản lý đối tượng đó trên html bao gồm các tính năng thêm, sửa, xóa,
+                                tìm kiếm cho đối tượng đó. Ví dụ, làm chức năng Quản lý Sinh viên, bao gôm tính năng
+                                thêm, sửa, xóa, tìm kiếm. <br> Chú ý: Các thành viên trong lớp, trong nhóm không được
+                                chọn
+                                các đối tượng giống nhau.
+                                Tạo 1 menu Lab4 trên website cá nhân (sử dụng thẻ <a> trong html) bao gồm các tab sau:
+                            </p>
+                            <ol>
+                                <li> Tab Requirement: copy lại nội dung của phần 1 ở trên (Yêu cầu) vào đây (và trình
+                                    bày lại cho đẹp)</li>
+                                <li>Tab Design: để link tới các file sau đây:
+                                    <ul>
+                                        <li>Thiết kế trên giấy (chụp lại ảnh) (có nút Download để tải ảnh về)</li>
+                                        <li>Chụp lại màn hình đã thiết kế trên HTML (có nút Download và Go to Figma để
+                                            link tới link Figma - share ở dạng file để cô có thể coi từng thành phần)
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li> Tab Implement: là trang html của chức năng Quản lý đó</li>
+                            </ol>
+                        </div>
+
+                        <div id="design" class="tabcontent">
+                            <div class="design_1">
+                                <h3>Thiết kế trên html</h3>
+                                <div class="imageContainer">
+                                    <img src="img/BookManagement1.jpg" alt="Thiết kế trên giấy">
+                                    <button class="downloadButton"
+                                        onclick="downloadImage('img/QuanLySinhVien_Giay.png')">Download</button>
+                                </div>
+                            </div>
+                            <div class="design_2">
+                                <h3>Thiết kế trên Figma</h3>
+                                <div class="imageContainer">
+                                    <img src="img/BookManagement.jpg" alt="Thiết kế trên Figma">
+                                    <div class="btn2">
+                                        <button class="downloadButton"
+                                            onclick="downloadImage('img/QuanLySinhVien.jpg')">Download</button>
+                                        <button class="goToFigma"><a
+                                                href="https://www.figma.com/file/zNkHaxzDzqw5GE8SxbJ6qq/BookManagement?type=design&node-id=0%3A1&mode=design&t=MMfwL5VRGtlWutyO-1">Go
+                                                To Figma</a></button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="implement" class="tabcontent">
+                            <div class="head">
+                                <h1>Book management</h1>
+
+                            </div>
+                            <div class="main">
+                                <div class="input">
+                                    <h2>Quản Lý Sách</h2>
+                                    <div class="search">
+                                        <input type="text" id="searchBook" placeholder="Nhập tên sách hoặc tác giả">
+                                        <button onclick="searchBook()">Tìm kiếm</button>
+                                    </div>
+                                    <form method="post" id="addBookForm">
+                                        <div class="book">
+                                            <label for="bookTitle">Tiêu đề sách:</label>
+                                            <input type="text" id="bookTitle" required>
+                                        </div>
+                                        <div class="author">
+                                            <label for="bookAuthor">Tác giả:</label>
+                                            <input type="text" id="bookAuthor" required>
+                                        </div>
+                                        <div class="publish_company">
+                                            <label for="company">Nhà xuất bản:</label>
+                                            <input type="text" id="company" required>
+
+                                        </div>
+                                        <div class="year_publish">
+                                            <label for="year">Năm xuất bản:</label>
+                                            <input type="text" id="year" required>
+                                        </div>
+                                        <div class="add">
+                                            <button type="submit" class="add_btn" id="btn_save">Thêm</button>
+                                            <button type="reset" class="btn btn-warning" id="btn_reset">Reset</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <div class="result">
+                                    <table class="table table-bordered" style="margin-top: 20px">
+                                        <thead>
+                                            <tr class="bg-success">
+                                                <th width="50">STT</th>
+                                                <th width="180">Tên Sách</th>
+                                                <th width="160">Tác Giả</th>
+                                                <th width="150">Nhà Xuất Bản</th>
+                                                <th width="100">Năm Xuất Bản</th>
+                                                <th width="50"></th>
+                                                <th width="50"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="book_list_id">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="copyright-box">
+                        <p class="copyright">&copy; Copyright <strong>Le Van Luan</strong>. All Rights Reserved</p>
+                        <div class="credits">
+                            Designed by <a href="https://www.facebook.com/profile.php?id=100028881513044">Le Van
+                                Luan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/jquery/jquery-migrate.min.js"></script>
+    <script src="lib/popper/popper.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/counterup/jquery.waypoints.min.js"></script>
+    <script src="lib/counterup/jquery.counterup.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <!-- Contact Form JavaScript File -->
+    <script src="contactform/contactform.js"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="js/main.js"></script>
+
+    <script src="js/labb4.js"></script>
+    <script src="js/dowload.js"></script>
+    <script src="js/implement.js"></script>
+</body>
+
+</html>
