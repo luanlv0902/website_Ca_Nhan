@@ -1,4 +1,6 @@
-
+window.onload = function () {
+    document.getElementById('bookTitle').focus();
+};
 var bookList = []
 var currentIndex = -1
 
@@ -33,21 +35,34 @@ $('#addBookForm').submit(function () {
         bookList.push(b)
     }
 
-    //  Hien thi du lieu len table
-    // $('#book_list_id').append(`<tr>
-    // 		<td>${bookList.length}</td>
-    // 		<td>${b.bookTitle}</td>
-    // 		<td>${b.bookAuthor}</td>
-    // 		<td>${b.company}</td>
-    // 		<td>${b.year}</td>
-    // 		<td><button class="btn btn-warning" onclick="editBook(${bookList.length - 1})">Sửa</button></td>
-    // 		<td><button class="btn btn-danger" onclick="deleteBook(${bookList.length - 1})">Xóa</button></td>
-    // 	</tr>`)
     showData()
-
     $('#btn_reset').click() //Click tu dong vao button reset -> xoa du lieu trong form di.
     return false;
 })
+
+function searchBooks() {
+    // Lấy giá trị nhập từ ô tìm kiếm
+    var searchValue = document.getElementById('searchBook').value.toUpperCase();
+
+    // Lấy danh sách các hàng trong bảng
+    var rows = document.getElementById('book_list_id').getElementsByTagName('tr');
+
+    // Duyệt qua từng hàng để ẩn/hiện dữ liệu tương ứng
+    for (var i = 0; i < rows.length; i++) {
+        var bookName = rows[i].getElementsByTagName('td')[1]; // Cột Tên Sách
+        var author = rows[i].getElementsByTagName('td')[2]; // Cột Tác Giả
+
+        // Nếu tên sách hoặc tác giả chứa giá trị tìm kiếm, hiển thị hàng đó, ngược lại ẩn đi
+        if (bookName || author) {
+            if (bookName.innerHTML.toUpperCase().indexOf(searchValue) > -1 ||
+                author.innerHTML.toUpperCase().indexOf(searchValue) > -1) {
+                rows[i].style.display = '';
+            } else {
+                rows[i].style.display = 'none';
+            }
+        }
+    }
+}
 
 function editBook(index) {
     currentIndex = index
@@ -58,23 +73,7 @@ function editBook(index) {
     $('#company').val(b.company)
     $('#year').val(b.year)
 }
-// function searchBook() {
-//     var keyword = document.getElementById('searchBook').value.toLowerCase();
-//     var searchResults = [];
 
-
-//     for (var i = 0; i < bookList.length; i++) {
-//       var bookTitle = bookList[i].name.toLowerCase();
-//       var bAuthor = bookList[i].id.toLowerCase();
-
-//       if (bookTitle.includes(keyword) || bAuthor.includes(keyword)) {
-//         searchResults.push(bookList[i]);
-//       }
-//     }
-
-
-//     showData()
-//   }
 function deleteBook(index) {
     var option = confirm('Ban co chac chan muon xoa sach nay khong?')
     if (!option) return
@@ -103,4 +102,8 @@ function showData() {
     var json = JSON.stringify(bookList)
     //Save
     localStorage.setItem('bList', json)
+
+
+
+
 }

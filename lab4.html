@@ -126,8 +126,8 @@
                                 <div class="input">
                                     <h2>Quản Lý Sách</h2>
                                     <div class="search">
-                                        <input type="text" id="searchBook" placeholder="Nhập tên sách hoặc tác giả">
-                                        <button onclick="searchBook()">Tìm kiếm</button>
+                                        <input type="text" id="searchBook" placeholder="Nhập tên sách hoặc tác giả" oninput="searchBooks()">
+                                        <button onclick="searchBooks()">Tìm kiếm</button>
                                     </div>
                                     <form method="post" id="addBookForm">
                                         <div class="book">
@@ -136,8 +136,17 @@
                                         </div>
                                         <div class="author">
                                             <label for="bookAuthor">Tác giả:</label>
-                                            <input type="text" id="bookAuthor" required>
+                                            <input type="text" id="bookAuthor" required autofocus>
+                                            <script>
+                                                window.addEventListener('DOMContentLoaded', (event) => {
+                                                    // Tìm trường nhập liệu trong tab 3 và tập trung vào nó
+                                                    const inputField = document.getElementById('bookTitle');
+                                                    inputField.focus();
+                                                });
+                                            </script>
                                         </div>
+
+
                                         <div class="publish_company">
                                             <label for="company">Nhà xuất bản:</label>
                                             <input type="text" id="company" required>
@@ -198,7 +207,11 @@
         </div>
     </footer>
 
-
+    <script>
+        window.onload = function () {
+            document.getElementById('bookTitle').focus();
+        };
+    </script>
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/jquery/jquery-migrate.min.js"></script>
     <script src="lib/popper/popper.min.js"></script>
