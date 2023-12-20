@@ -677,7 +677,7 @@ a:hover {
 //--//-->   ABOUT
 ======================================*/
 #about {
-  background-color: #0078ff;
+  background-color: #00a8ff;
 }
 
 .about-mf .box-shadow-full {
@@ -713,7 +713,7 @@ a:hover {
 //--//-->   LAB 4
 ======================================*/
 #lab4 {
-  background-color: #00c8ff;
+  background-color: #00a8ff;
   color: #1B1B1B;
   width: 100%;
 
@@ -890,6 +890,246 @@ ol {
 
 #addBookForm {
   font-size: 20px;
+}
+
+/*======================================
+//--//-->   LAB 6
+======================================*/
+#lab6 {
+  background-color: #00a8ff;
+}
+
+#lab6 .nav-tabs {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-tabs .ex-nav {
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+#lab6 .nav-tabs a:hover {
+  background-color: #0000ff;
+  color: #fff;
+}
+
+#lab6 .content {
+  padding: 100px 0px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+#canvas {
+  border-radius: 50%;
+  top: 100px;
+  left: 0px;
+}
+
+.canvas_container {
+  position: absolute;
+  width: 100%;
+}
+
+/*  EX1 */
+#ex1 {
+  background-color: #00a8ff;
+  color: #1B1B1B;
+  width: 100%;
+
+}
+
+#ex1 .sub_tabs {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+#ex1 .tablink {
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  margin: 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+#ex1 .tablink:hover {
+  background: #0984e3;
+  color: #fff;
+}
+
+/* Tab active */
+#ex1 .tablink.active {
+  background: blue;
+  color: #fff;
+}
+
+/* tab content */
+#ex1 .tabcontent {
+  display: none;
+}
+
+/* tab content active */
+#ex1 .tabcontent.active {
+  display: block;
+}
+
+#ex1 .wrapper_tabcontent {
+  background-color: #2ecc71;
+}
+
+#ex1 #implement_ex1 .mainn {
+  display: flex;
+}
+
+.ex1_left {
+  width: 70%;
+}
+
+.ex1_left p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.ex1_right {
+  width: 30%;
+}
+
+.ex1_right img {
+  padding-top: 50px;
+  width: 300px;
+  height: 500px;
+}
+
+#design_ex1 {
+  text-align: center;
+  background-color: white;
+  padding-bottom: 20px;
+}
+
+#design_ex1 img {
+  width: 760px;
+}
+
+#design_ex1 a {
+  background-color: blue;
+  font-size: 26px;
+  text-align: center;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+
+/* EX2 */
+#ex2 {
+  background-color: #00a8ff;
+  color: #1B1B1B;
+  width: 100%;
+
+}
+
+#ex2 .sub_tabs {
+  display: flex;
+  padding-bottom: 20px;
+}
+
+#ex2 .tablink {
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 1rem;
+  margin: 10px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+#ex2 .tablink:hover {
+  background: #0984e3;
+  color: #fff;
+}
+
+/* Tab active */
+#ex2 .tablink.active {
+  background: blue;
+  color: #fff;
+}
+
+/* tab content */
+#ex2 .tabcontent {
+  display: none;
+}
+
+/* tab content active */
+#ex2 .tabcontent.active {
+  display: block;
+}
+
+#ex2 .wrapper_tabcontent {
+  background-color: #2ecc71;
+}
+
+#ex2 .top_ex2 {
+  display: flex;
+  padding: 30px 0px;
+}
+
+#ex2 .bottom_ex2 {
+  display: flex;
+}
+
+#ex2 .top_ex2 img {
+  width: 250px;
+  height: 250px;
+  margin-left: 20px;
+  padding-right: 20px;
+}
+
+#ex2 .top_ex2 p {
+  font-size: 26px;
+}
+
+#ex2 .bottom_ex2 img {
+  width: 250px;
+  height: 250px;
+  margin-right: 20px;
+}
+
+#ex2 .bottom_ex2 p {
+  font-size: 26px;
+}
+#design_ex2 {
+  text-align: center;
+  background-color: white;
+  padding-bottom: 10px;
+}
+
+#design_ex2 img {
+  width: 760px;
+}
+
+#design_ex2 a {
+  background-color: blue;
+  font-size: 26px;
+  text-align: center;
+  color: #fff;
+  padding: 10px 10px;
+  border-radius: 10px;
 }
 
 /*======================================
